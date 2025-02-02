@@ -1,0 +1,37 @@
+Reading data from terminal
+    โดยปกติแล้วใน Java จะใช้คบ่าที่มีชื่อว่า Scanner (เป็นส่วนหนึ่งของ utils package) สำหรับการอ่านข้อมูลที่จะนำเข้ามาใส่โปรแกรม
+
+    ตัวอย่างการใช้งาน
+        import java.lang.*;
+        import java.utils.*;
+
+        class Main {
+            public static void main(String args[]) {
+                Scanner s = new Scanner(System.in);
+                int a, b, c;
+
+                System.out.println("Enter 2 number");
+                a = s.nextInt(); // อ่านข้อมูลจากคีย์บอร์ด ในรูปแบบ integer
+                b = s.nextInt();
+                c = a + b;
+                System.out.println("Sum of 2 number is " + c);
+            }
+        }
+
+    ** System.in ใช้สำหรับรับข้อมูลเข้ามาผ่าน keyboard
+    
+    โดย method ที่ใช้ในการอ่านข้อมูลจาก keyboard จะมีดังนี้
+        nextInt() อ่านข้อมูลในรูปแบบ integer
+        nextFloat() อ่านข้อมูลในรูปแบบ float
+        nextDouble() อ่านข้อมูลในรูปแบบ double
+        next() อ่านข้อมูลแค่คำแรกของบรรทัด
+        nextLine() อ่านข้อมูลทั้งบรรทัด
+        nextByte() อ่านข้อมูลในรูปแบบ byte 
+        nextShort() อ่านข้อมูลในรูปแบบ short 
+        nextLong() อ่านข้อมูลในรูปแบบ byte 
+        nextBoolean() อ่านข้อมูลในรูปแบบ boolean
+        hasNextInt() ตรวจสอบว่าค่าที่ได้รับมาเป็น integer หรือไม่ ส่งคืนเป็น boolean
+        hasNextFloat() ตรวจสอบว่าค่าที่ได้รับมาเป็น float หรือไม่ ส่งคืนเป็น boolean
+
+    ถ้าอยากรู้ว่าใน class นั้นมี method อะไรให้ใช้งานบ้าง สามารถใช้งานคำสั่ง javap ใน terminal ได้
+    เช่น javap java.util.Scanner
